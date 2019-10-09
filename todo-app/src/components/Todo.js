@@ -50,8 +50,10 @@ const Todo = () => {
 
   function removeAllTodosThatAreComplete() {
 
-    setState({
-      data: state.data.filter(item => !item.done)
+    // setState({
+    dispatch({
+      // data: state.data.filter(item => !item.done)
+      type: "REMOVE_ALL"
     });
   };
 
