@@ -35,6 +35,24 @@ const Todo = () => {
     });
   };
 
+  function onUpdateHandle(event) {
+    event.preventDefault();
+
+    setState({
+      data: state.data.map(item => {
+        if (item.id === state.id) {
+          item["title"] = event.target.updatedItem.value;
+          return item;
+        }
+        return item;
+      })
+    });
+
+    setState({
+      edit: false
+    });
+  }
+
   
   
 }
