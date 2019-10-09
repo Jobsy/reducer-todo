@@ -69,6 +69,23 @@ const Todo = () => {
 
   }
 
+  function renderEditForm() {
+    if (state.edit) {
+      return (
+        <form onSubmit={onUpdateHandle}>
+          <input
+            type="text"
+            name="updatedItem"
+            className="item"
+            defaultValue={state.title}
+          />
+          <button className="update-add-item">Update</button>
+        </form>
+      );
+    }
+  }
+
+
   
   
 }
