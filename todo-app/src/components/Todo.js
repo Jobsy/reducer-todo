@@ -66,7 +66,8 @@ const Todo = () => {
   function onUpdateHandle(event) {
     event.preventDefault();
 
-    setState({
+    // setState({
+    dispatch({
       data: state.data.map(item => {
         if (item.id === state.id) {
           item["title"] = event.target.updatedItem.value;
@@ -76,7 +77,8 @@ const Todo = () => {
       })
     });
 
-    setState({
+    // setState({
+    dispatch({
       edit: false
     });
   }
