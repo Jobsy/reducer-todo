@@ -34,6 +34,11 @@ export const initialState = {
             }
           })
         })
+
+        case "REMOVE_ALL":
+        return ({
+          data: state.data.filter(item => !item.done)
+        })
           default:
               return state;
       }
