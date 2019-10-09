@@ -21,6 +21,13 @@ const Todo = () => {
   }
   )
 
+  function onDeleteHandle(id) {
+    setState(state => ({
+
+      data: state.data.filter(item => item.id !== id)
+    }));
+  }
+
 
   
   
