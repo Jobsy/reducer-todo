@@ -85,6 +85,26 @@ const Todo = () => {
     }
   }
 
+  return (
+    <div>
+      {renderEditForm()}
+      {console.log("sssss: ", state)}
+
+      <TodoForm onSubmitHandle={onSubmitHandle} />
+
+      <button onClick={removeAllTodosThatAreComplete}>
+        Remove all complete todos
+        </button>
+
+      <ul>
+        {state.data.map(item => (
+          <TodoList key={item.id} title={item.title} done={item.done} onDeleteHandle={() => onDeleteHandle(item.id)} onCompleteHandle={() => onCompleteHandle(item.id)} />
+        ))}
+      </ul>
+    </div>
+  );
+
+
 
   
   
