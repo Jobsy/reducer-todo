@@ -9,17 +9,19 @@ import { initialState, reducer } from "../reducers/reducer";
 
 const Todo = () => {
 
-  const [state, setState] = useState({
-    data: [
-      {
-        id: "1",
-        title: "Buy Milk.",
-        done: false,
-        date: new Date()
-      }
-    ]
-  }
-  )
+  // const [state, setState] = useState({
+  //   data: [
+  //     {
+  //       id: "1",
+  //       title: "Buy Milk.",
+  //       done: false,
+  //       date: new Date()
+  //     }
+  //   ]
+  // }
+  // )
+  const [state, dispatch] = useReducer(reducer, initialState);
+
 
   function onSubmitHandle(event) {
     event.preventDefault();
