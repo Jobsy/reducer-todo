@@ -28,6 +28,12 @@ const Todo = () => {
     }));
   }
 
+  function removeAllTodosThatAreComplete() {
+
+    setState({
+      data: state.data.filter(item => !item.done)
+    });
+  };
 
   
   
