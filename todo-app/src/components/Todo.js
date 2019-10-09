@@ -42,10 +42,14 @@ const Todo = () => {
   
   }
   function onDeleteHandle(id) {
-    setState(state => ({
-
-      data: state.data.filter(item => item.id !== id)
-    }));
+    // setState(state => ({
+    dispatch({
+    //   state => ({
+    //   data: state.data.filter(item => item.id !== id)
+    // }));
+    type: "DELETE",
+    payload: id
+    });
   }
 
   function removeAllTodosThatAreComplete() {
