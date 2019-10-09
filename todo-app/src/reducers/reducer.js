@@ -20,6 +20,20 @@ export const initialState = {
                 }
               ]
             }
+
+            case "IS_COMPLETE":
+        return ({
+          data: state.data.map(item => {
+            if (item.id === action.payload) {
+              return {
+                ...item,
+                done: !item.done
+              };
+            } else {
+              return item;
+            }
+          })
+        })
           default:
               return state;
       }
