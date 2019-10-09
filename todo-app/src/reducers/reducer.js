@@ -39,6 +39,12 @@ export const initialState = {
         return ({
           data: state.data.filter(item => !item.done)
         })
+
+        case "DELETE":
+        return ({
+                    data: state.data.filter(item => item.id !== action.payload)
+          
+        })
           default:
               return state;
       }
