@@ -53,6 +53,22 @@ const Todo = () => {
     });
   }
 
+  function onCompleteHandle(id) {
+    setState(state => ({
+      data: state.data.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            done: !item.done
+          };
+        } else {
+          return item;
+        }
+      })
+    }));
+
+  }
+
   
   
 }
