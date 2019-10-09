@@ -6,13 +6,13 @@ export const initialState = {
     id: 3892987589
   };
 
-  export const reducer = (state, action) => {
-      switch (action.type) {
-          case value:
+  // export const reducer = (state, action) => {
+  //     switch (action.type) {
+  //         case value:
               
-              break;
+  //             break;
       
-          default:
-              return state;
-      }
-  }
+  //         default:
+  //             return state;
+  //     }
+  // }

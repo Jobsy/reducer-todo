@@ -21,6 +21,21 @@ const Todo = () => {
   }
   )
 
+  function onSubmitHandle(event) {
+    event.preventDefault();
+    setState({
+      data: [
+        ...state.data,
+        {
+          id: Date.now(),
+          title: event.target.item.value,
+          done: false,
+          date: new Date()
+        }
+      ]
+    });
+    event.target.item.value = "";
+  }
   function onDeleteHandle(id) {
     setState(state => ({
 
@@ -106,8 +121,8 @@ const Todo = () => {
 
 
 
-  
-  
+
+
 }
 
 
